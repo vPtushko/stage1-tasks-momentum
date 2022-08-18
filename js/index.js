@@ -113,7 +113,7 @@ async function getQuotes() {
   const quotes = "data.json";
   const res = await fetch(quotes);
   const data = await res.json();
-  let numderQuotes = getRandomNum(0, 6);
+  let numderQuotes = getRandomNum(0, 3);
   console.log(numderQuotes);
   quote.textContent = `${data[numderQuotes].text}`;
   author.textContent = `${data[numderQuotes].author}`;
@@ -127,6 +127,7 @@ buttonQuotesRefresh.addEventListener("click", getQuotes);
  slidePrev.addEventListener("click", getSlidePrev);
  window.addEventListener("beforeunload", setLocalStorage);
  window.addEventListener("load", getLocalStorage);
+ window.addEventListener('load', () => { clockTimer(); });
 
   /* momentum-weather*/
 let weatherIcon = document.querySelector(".weather-icon");
