@@ -258,11 +258,11 @@ body {
 }
 
 .quote {
-  min-height: 32px;
+  color: #fff;
 }
 
 .author {
-  min-height: 20px;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
