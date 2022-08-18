@@ -49,9 +49,3 @@ function playPrev() {
   playAudio();
 }
 
-playList.forEach((element) => {
-  let li = document.createElement("li");
-  li.classList.add("play-item");
-  li.textContent = element.title;
-  playListBlock.append(li);
-});
